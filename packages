@@ -1,0 +1,9 @@
+vim
+git
+tmux
+xinit
+i3 --no-install-recommends
+rofi
+polybar
+network-manager
+chromium
