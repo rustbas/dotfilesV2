@@ -7,3 +7,6 @@ rofi
 polybar
 network-manager
 chromium
+xclip
+xcape
+xsel
