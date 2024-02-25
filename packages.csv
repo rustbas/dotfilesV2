@@ -1,16 +1,21 @@
-APP
-vim
-git
-tmux
-xinit
-i3 --no-install-recommends
-rofi
-polybar
-network-manager
-chromium
-maim
-xclip
-xcape
-xsel
-unzip
-cmus
+APP,FROM
+vim,apt
+git,apt
+tmux,apt
+xinit,apt
+i3 --no-install-recommends,apt
+rofi,apt
+polybar,apt
+network-manager,apt
+chromium,apt
+maim,apt
+xclip,apt
+xcape,apt
+xsel,apt
+unzip,apt
+cmus,apt
+pulseaudio,apt
+alsa-oss,apt
+jackd,apt
+telegram-desktop,snap
+thunderbird,snap
