@@ -20,3 +20,4 @@ alsa-utils,apt
 jackd,apt
 telegram-desktop,snap
 thunderbird,snap
+light,apt
