@@ -16,6 +16,7 @@ unzip,apt
 cmus,apt
 pulseaudio,apt
 alsa-oss,apt
+alsa-utils,apt
 jackd,apt
 telegram-desktop,snap
 thunderbird,snap
