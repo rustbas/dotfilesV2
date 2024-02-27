@@ -117,5 +117,8 @@ export EDITOR="vim"
 export PATH="$PATH:/usr/sbin"
 
 # Keyboard
-setxkbmap -option 'caps:ctrl_modifier';xcape -e 'Caps_Lock=Escape'&
-setxkbmap -layout us,ru && setxkbmap -option 'grp:win_space_toggle'
+if [ -z $DISPLAY ]
+then
+	setxkbmap -option 'caps:ctrl_modifier';xcape -e 'Caps_Lock=Escape'&
+	setxkbmap -layout us,ru && setxkbmap -option 'grp:win_space_toggle'
+fi
