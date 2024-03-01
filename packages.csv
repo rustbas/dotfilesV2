@@ -21,3 +21,5 @@ jackd,apt
 telegram-desktop,snap
 thunderbird,snap
 light,apt
+curl,apt
+obsidian,site
