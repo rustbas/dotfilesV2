@@ -8,9 +8,9 @@ URxvt.iso14755_52: false
 
 ! Install "urxvt-resize-font-git" from the AUR
 
-URxvt.perl-ext-common:  resize-font
-URxvt.keysym.C-Down:  resize-font:smaller
-URxvt.keysym.C-Up:    resize-font:bigger
+! URxvt.perl-ext-common:  resize-font
+! URxvt.keysym.C-Down:  resize-font:smaller
+! URxvt.keysym.C-Up:    resize-font:bigger
 
 *.foreground: #C6C6C6
 *.background: #1C1C1C 
@@ -82,5 +82,5 @@ urxvt.fading: 10
 !URxvt*inheritPixmap: true
 !URxvt*transparent: false
 ! URxvt*shading: 0 to 99 darkens, 101 to 200 lightens
-!URxvt*shading: 15
+! URxvt*shading: 15
 !URxvt.depth: 2 URxvt.background: [15]#000000
