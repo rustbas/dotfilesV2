@@ -23,8 +23,9 @@ set cursorline
 " Syntax highlighting 
 syntax on
 
-" Search hlo
+" Search settings
 set hlsearch
+set incsearch
 
 " tabs and indents
 set expandtab
