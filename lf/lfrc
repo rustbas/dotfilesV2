@@ -1,0 +1,29 @@
+# filetype icons
+set icons
+
+# ruler
+set relativenumber
+
+# hidden files
+set hidden true 
+
+# cmd calls by ":"
+
+# mkdir cmd
+cmd mkdir ${{
+    printf "Directory name: "
+    read ans
+    mkdir $ans
+}}
+
+# make file
+cmd mkfile ${{
+    printf "File name: "
+    read ans
+    $EDITOR $ans
+}}
+
+# make file
+cmd edit ${{
+    $EDITOR $f
+}}
