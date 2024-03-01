@@ -45,7 +45,7 @@ URxvt*utf8: 2
 URxvt*utf8Title: true
 URxvt*locale: 1
 !URxvt*font: xft:DejaVu Sans Mono:size=12:antialias=true:style=Book
-URxvt*font: xft:JetBrains Mono NF:size=12:antialias=true:style=Book
+URxvt*font: xft:JetBrainsMono Nerd Font:size=11
 !URxvt*font: xft:Inconsolata Nerd Font Mono:style=Medium:size=10:pixelsize=16:antialias=true
 URxvt*borderLess: false
 URxvt*externalBorder: 0
