@@ -219,3 +219,8 @@ exec urxvtc -name htop_scratchpad -e htop
 for_window [instance="cmus_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+m [instance="cmus_scratchpad"] scratchpad show
 exec urxvtc -cd /home/$USER/Music -name cmus_scratchpad -e "cmus"
+
+# Scratchpad lf
+for_window [instance="lf_scratchpad"] move to scratchpad, border none
+bindsym $mod+Shift+f [instance="lf_scratchpad"] scratchpad show
+exec urxvtc  -name lf_scratchpad -e "lf"
