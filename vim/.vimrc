@@ -94,3 +94,6 @@ nnoremap <leader>m :make<CR>
 
 " test
 autocmd Filetype latex let @r="\\begin{Large}\n\\end{Large}"
+
+" set transparency (MUST BE AFTER SETTING COLORSHCHEME!)
+highlight Normal ctermbg=NONE
