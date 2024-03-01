@@ -83,6 +83,5 @@ urxvt.fading: 10
 !URxvt*inheritPixmap: true
 URxvt*transparent: true
 ! URxvt*shading: 0 to 99 darkens, 101 to 200 lightens
-!URxvt*shading: 17
-URxvt.depth: 2 URxvt.background: [15]#000000
-!
+URxvt*shading: 7
+! URxvt.depth: 2 URxvt.background: [5]#000000
