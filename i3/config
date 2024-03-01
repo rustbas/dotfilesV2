@@ -229,19 +229,7 @@ exec urxvtc  -name lf_scratchpad -e "lf"
 # test border
 for_window [class="^.*"] border pixel 3
 
-
-
-
-
-
-
-
-
-
-
-
-# test colors
-
+# colors
 # special
 set_from_resource $foreground foreground #C6C6C6
 set_from_resource $background background #1C1C1C
