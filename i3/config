@@ -210,10 +210,12 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 # i3Lock 
 bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000000
 
-# Scratchpad Test
-
+# Scratchpad htop
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
 exec urxvtc -name htop_scratchpad -e htop
 
-
+# Scratchpad cmus
+for_window [instance="cmus_scratchpad"] move to scratchpad, border none
+bindsym $mod+Shift+m [instance="cmus_scratchpad"] scratchpad show
+exec urxvtc -cd /home/$USER/Music -name cmus_scratchpad -e "cmus"
