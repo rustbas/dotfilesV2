@@ -28,7 +28,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -c 000000
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i /home/rustam/dotfilesV2/wp3.png
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -208,7 +208,8 @@ bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewi
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # i3Lock 
-bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000000
+# bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000016
+bindsym $mod+Ctrl+l exec --no-startup-id i3lock -i /home/rustam/dotfilesV2/wp3.png
 
 # Scratchpad htop
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
