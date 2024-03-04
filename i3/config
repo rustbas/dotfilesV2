@@ -212,12 +212,12 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 bindsym $mod+Ctrl+l exec --no-startup-id i3lock -i /home/rustam/dotfilesV2/wp3.png
 
 # Scratchpad htop
-for_window [instance="htop_scratchpad"] move to scratchpad, border none
+for_window [instance="htop_scratchpad"] move to scratchpad, border none, resize set 1000 800
 bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
 exec urxvtc -name htop_scratchpad -e htop
 
 # Scratchpad cmus
-for_window [instance="cmus_scratchpad"] move to scratchpad, border none
+for_window [instance="cmus_scratchpad"] move to scratchpad, border none, resize set 800 600
 bindsym $mod+Shift+m [instance="cmus_scratchpad"] scratchpad show
 exec urxvtc -cd /home/$USER/Music -name cmus_scratchpad -e "cmus"
 
