@@ -115,6 +115,7 @@ fi
 # VARIABLES
 export EDITOR="vim"
 export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:/home/rustam/Applications"
 
 # Keyboard
 if [ $TERM != "linux" ]
