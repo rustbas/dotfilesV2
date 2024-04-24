@@ -15,7 +15,9 @@ vim.call('plug#end')
 -- PLUGIN SETTINGS --
 ---------------------
 
-
+-- NERDTree
+vim.g.NERDTreeFileLines = 1 -- Line number
+vim.g.NERDTreeFilesIgnore = {'^__pycache__'} -- Ignore dirs
 
 -- colorscheme
 vim.cmd('colorscheme molokai')
@@ -26,7 +28,5 @@ vim.cmd('highlight Normal ctermbg=NONE')
 -- PLUGIN HOTKEYS --
 --------------------
 
--- NerdTree
+-- NERDTree
 vim.keymap.set('n','<leader>n',':NERDTreeToggle<CR>')
--- let g:NERDTreeFileLines = 1 " Line number
--- let g:NERDTreeFilesIgnore = ['^__pycache__'] " Ignore dirs
