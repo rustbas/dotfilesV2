@@ -1,3 +1,3 @@
 # TODO
 
-- [ ] Split config to multiple files
+- [x] Split config to multiple files
