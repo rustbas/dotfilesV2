@@ -5,6 +5,9 @@ require("mason-lspconfig").setup({
 
 require("lspconfig").clangd.setup {}
 
+-- Set static signcolumn with errors
+vim.opt.signcolumn = "yes"
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
