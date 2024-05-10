@@ -12,6 +12,7 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 -- Plug 'vim-airline/vim-airline'
 -- Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 vim.call('plug#end')
 
 ---------------------
