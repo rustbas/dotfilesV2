@@ -34,3 +34,7 @@ vim.cmd('highlight Normal ctermbg=NONE')
 
 -- NERDTree
 vim.keymap.set('n','<leader>n',':NERDTreeToggle<CR>')
+
+-- Vim-fugitive
+vim.keymap.set('n','<leader>gg',':Git<CR>')
+vim.keymap.set('n','<leader>gcb',':Git checkout ')
