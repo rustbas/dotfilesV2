@@ -53,7 +53,7 @@ local function git_branch()
     if string.len(branch) > 0 then
         return branch
     else
-        return ""
+        return "none"
     end
 end
 
@@ -61,25 +61,27 @@ local function statusline()
     local set_color_1 = "%#PmenuSel#"
     local branch = git_branch() --'%{FugitiveStatusline()}'
     local set_color_2 = "%#LineNr#"
-    local position = " %f:%l:%c"
+    local position = "%f:%l:%c"
     local modified = "%m"
     local align_right = "%="
-    local fileencoding = " %{&fileencoding?&fileencoding:&encoding}"
-    local fileformat = " [%{&fileformat}]"
-    local filetype = " %y"
-    local percentage = " %p%%"
+    local fileencoding = "%{&fileencoding?&fileencoding:&encoding}"
+    local fileformat = "[%{&fileformat}]"
+    local filetype = "%y"
+    local percentage = "%p%%"
+    local directory = "%{getcwd()}"
 
     return string.format(
-        " %s %s%s%s%s%s%s ",
+        " %s | %s | Branch: %s %s %s %s | %s ", -- | Fileformat: %s ",
         --set_color_1,
-        branch, -- fugitive - strange
         -- set_color_2,
+        directory,
         position,
+        branch, -- fugitive - strange
         modified,
         align_right,
         filetype,
-        fileencoding,
-        fileformat
+        fileencoding
+        -- fileformat
         -- percentage -- I don't think that is needed
     )
 end
