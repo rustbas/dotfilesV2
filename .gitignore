@@ -1,3 +1,6 @@
 # emacs swp files
 
 \#*\#
+
+# neovim undo tree folder
+./neovim/undo/*
