@@ -45,3 +45,43 @@ vim.opt.wildmode=longest,list
 
 -- Fold by indents
 vim.cmd('set foldmethod=indent')
+
+-- Status line
+-- vim.opt.statusline=""
+local function git_branch()
+    local branch = vim.fn.system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+    if string.len(branch) > 0 then
+        return branch
+    else
+        return ""
+    end
+end
+
+local function statusline()
+    local set_color_1 = "%#PmenuSel#"
+    local branch = git_branch() --'%{FugitiveStatusline()}'
+    local set_color_2 = "%#LineNr#"
+    local position = " %f:%l:%c"
+    local modified = "%m"
+    local align_right = "%="
+    local fileencoding = " %{&fileencoding?&fileencoding:&encoding}"
+    local fileformat = " [%{&fileformat}]"
+    local filetype = " %y"
+    local percentage = " %p%%"
+
+    return string.format(
+        "%s %s%s%s%s%s%s",
+        --set_color_1,
+        branch, -- fugitive - strange
+        -- set_color_2,
+        position,
+        modified,
+        align_right,
+        filetype,
+        fileencoding,
+        fileformat
+        -- percentage -- I don't think that is needed
+    )
+end
+
+vim.opt.statusline = statusline()
