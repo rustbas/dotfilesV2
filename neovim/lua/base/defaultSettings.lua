@@ -59,7 +59,8 @@ end
 
 local function statusline()
     local set_color_1 = "%#PmenuSel#"
-    local branch = git_branch() --'%{FugitiveStatusline()}'
+    local branch = '%{FugitiveStatusline()}' -- better cause of fast reloading
+    -- local branch = git_branch() 
     local set_color_2 = "%#LineNr#"
     local position = "%f:%l:%c"
     local modified = "%m"
