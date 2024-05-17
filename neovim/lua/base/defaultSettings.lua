@@ -70,7 +70,7 @@ local function statusline()
     local percentage = " %p%%"
 
     return string.format(
-        "%s %s%s%s%s%s%s",
+        " %s %s%s%s%s%s%s ",
         --set_color_1,
         branch, -- fugitive - strange
         -- set_color_2,
