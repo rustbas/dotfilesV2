@@ -3,4 +3,4 @@
 \#*\#
 
 # neovim undo tree folder
-./neovim/undo/*
+neovim/undo
