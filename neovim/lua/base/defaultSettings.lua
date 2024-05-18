@@ -92,7 +92,8 @@ vim.opt.statusline = statusline()
 -- Undo tree
 -- save undo-trees in files
 vim.opt.undofile = true
-vim.opt.undodir="/home/rustam/.config/nvim/undo"
+-- vim.opt.undodir="/home/rustam/.config/nvim/undo"
+vim.opt.undodir=vim.fn.expand("$HOME") .. "/.config/nvim/undo"
 -- number of undo saved
 vim.opt.undolevels=10000
 vim.opt.undoreload=10000
