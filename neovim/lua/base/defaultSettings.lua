@@ -25,6 +25,16 @@ vim.opt.tabstop=4
 vim.opt.softtabstop=4
 vim.opt.shiftwidth=4
 
+-- C-indents
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = {"c", "cpp"},
+    callback = function()
+        vim.opt.tabstop=2
+        vim.opt.softtabstop=2
+        vim.opt.shiftwidth=2
+    end
+})
+
 vim.opt.smarttab = true
 vim.opt.autoindent = true
 
