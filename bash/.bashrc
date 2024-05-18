@@ -113,7 +113,8 @@ if ! shopt -oq posix; then
 fi
 
 # VARIABLES
-export EDITOR="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export PATH="$PATH:/usr/sbin"
 export PATH="$PATH:/home/rustam/Applications"
 
