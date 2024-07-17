@@ -1,0 +1,2 @@
+highlight feedlist "---.*---" red default bold
+highlight feedlist ".*0/0.." black default invis
