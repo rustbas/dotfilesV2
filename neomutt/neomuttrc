@@ -1,0 +1,24 @@
+set sidebar_visible
+set sidebar_format = "%B%<F? [%F]>%* %<N?%N/>%S"
+set mail_check_stats
+
+set from = "bronit10@morozko.ru"
+set smtp_pass = "`pass email/morozko/bronit10`"
+set realname = "John Doe"
+set smtp_url = "smtp://172.20.50.253:25/"
+
+set pop_user = "bronit10@morozko.ru"
+set pop_pass = "`pass email/morozko/bronit10`"
+set pop_host = "pop://172.20.50.253:110/"
+set pop_reconnect = yes
+set pop_delete = no
+set pop_checkinterval = 1
+#
+set folder = "pop://bronit10@morozko.ru@172.20.50.253:110"
+# set folder = "~/mail"
+set mbox = +Inbox
+set spoolfile= +Inbox
+mailboxes $folder
+
+set smtp_authenticators = 'plain'
+unset ssl_starttls
