@@ -15,6 +15,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'--, { 'tag': '0.1.6' }
+Plug 'brenoprata10/nvim-highlight-colors'
 vim.call('plug#end')
 
 ---------------------
@@ -28,8 +29,14 @@ vim.g.NERDTreeFilesIgnore = {'^__pycache__'} -- Ignore dirs
 -- colorscheme
 vim.cmd('colorscheme molokai')
 
+-- color highlighting
+-- Ensure termguicolors is enabled if not already
+vim.opt.termguicolors = true
+
+require('nvim-highlight-colors').setup({})
 -- set transparency (MUST BE AFTER SETTING COLORSHCHEME!)
-vim.cmd('highlight Normal ctermbg=NONE')
+-- vim.cmd('highlight Normal ctermbg=NONE')
+vim.cmd('hi! Normal ctermbg=NONE guibg=NONE')
 --------------------
 -- PLUGIN HOTKEYS --
 --------------------
