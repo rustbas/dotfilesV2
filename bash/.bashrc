@@ -116,7 +116,7 @@ fi
 export EDITOR="nvim"
 export VISUAL="nvim"
 export PATH="$PATH:/usr/sbin"
-export PATH="$PATH:/home/rustam/Applications"
+export PATH="$PATH:/home/rustam/workspace/apps/"
 
 # CLANGD
 export CPLUS_INCLUDE_PATH=/usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
