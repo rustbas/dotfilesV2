@@ -1,4 +1,5 @@
 require('base.defaultSettings')
 require('base.defaultHotkeys')
 require('base.plugins')
+require('base.vimwiki')
 require('lspconfig.lspconfig')

@@ -64,18 +64,3 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt.nofoldenable = true
     end
 })
-
--- VimWiki
-vim.cmd("let wiki_1 = {}")
-vim.cmd("let wiki_1.path = '~/workspace/my_docs/'")
-vim.cmd("let wiki_1.auto_export = 1")
-vim.cmd("let wiki_1.html_template = '~/public_html/template.tpl'")
-vim.cmd("let wiki_1.nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'bash': 'bash'}")
-
-vim.cmd("let wiki_2 = {}")
-vim.cmd("let wiki_2.path = '~/workspace/project_docs/'")
-vim.cmd("let wiki_2.index = 'main'")
-
-vim.cmd("let g:vimwiki_list = [wiki_1, wiki_2]")
-
-vim.cmd("let g:vimwiki_dir_link = 'index'")
