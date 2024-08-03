@@ -51,7 +51,7 @@ vim.opt.mouse=a
 vim.opt.clipboard=unnamedplus
 
 -- Autocomplete in shell
-vim.opt.wildmode=longest,list
+vim.opt.wildmode="list:longest"
 
 -- Fold by indents
 vim.cmd('set foldmethod=indent')
