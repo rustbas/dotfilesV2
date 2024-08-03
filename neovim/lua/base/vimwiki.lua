@@ -14,9 +14,16 @@ vim.cmd("let linux.path = '~/workspace/wikis/linux_installation/'")
 vim.cmd("let linux.auto_export = 1")
 vim.cmd("let linux.auto_toc = 1")
 
-vim.cmd("let g:vimwiki_list = [main,linux]")
+-- Morozko instructions
+vim.cmd("let morozko = {}")
+vim.cmd("let morozko.path = '~/workspace/wikis/morozko/'")
+vim.cmd("let morozko.auto_export = 1")
+vim.cmd("let morozko.auto_toc = 1")
+
+vim.cmd("let g:vimwiki_list = [main, linux, morozko]")
 
 vim.cmd("let g:vimwiki_dir_link = 'index'")
 
 vim.keymap.set('n', '<leader>ww1',":VimwikiIndex 1<CR>")
 vim.keymap.set('n', '<leader>ww2',":VimwikiIndex 2<CR>")
+vim.keymap.set('n', '<leader>ww3',":VimwikiIndex 3<CR>")
