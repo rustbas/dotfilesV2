@@ -10,6 +10,12 @@ XDG_CACHE_HOME=$HOME/.cache
 XDG_DATA_HOME=$HOME/.local/share 
 XDG_STATE_HOME=$HOME/.local/state 
 
+############
+# Setup lf #
+############
+
+[[ -L $XDG_CONFIG_HOME/lf ]] && rm -f $XDG_CONFIG_HOME/lf
+ln -s "$DOTFILES/lf" $XDG_CONFIG_HOME/lf
 
 ##############
 # Setup tmux #
@@ -42,7 +48,7 @@ ln -s "$DOTFILES/zsh/.zshrc" $XDG_CONFIG_HOME/zsh
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
-sleep 5
+sleep 10
 
 # some settings
 cat >> $XDG_CONFIG_HOME/zsh/.zshrc << EOF
