@@ -37,8 +37,8 @@ ln -s "$DOTFILES/zsh/.home.zshenv" ~/.zshenv
 [[ -d $XDG_CONFIG_HOME/zsh ]] && rm -rf $XDG_CONFIG_HOME/zsh
 mkdir --parents $XDG_CONFIG_HOME/zsh
 ln -s "$DOTFILES/zsh/.zshenv" $XDG_CONFIG_HOME/zsh
-# ln -s "$DOTFILES/zsh/.zshrc" $XDG_CONFIG_HOME/zsh
-touch $XDG_CONFIG_HOME/.zshrc
+ln -s "$DOTFILES/zsh/.zshrc" $XDG_CONFIG_HOME/zsh
+# touch $XDG_CONFIG_HOME/.zshrc
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
