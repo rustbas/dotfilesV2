@@ -11,6 +11,13 @@ XDG_DATA_HOME=$HOME/.local/share
 XDG_STATE_HOME=$HOME/.local/state 
 
 
+##############
+# Setup tmux #
+##############
+
+[[ -L $XDG_CONFIG_HOME/tmux ]] && rm -f $XDG_CONFIG_HOME/tmux
+ln -s "$DOTFILES/tmux" $XDG_CONFIG_HOME/tmux
+
 #############
 # Setup zsh #
 #############
