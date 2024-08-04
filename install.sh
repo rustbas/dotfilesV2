@@ -14,6 +14,14 @@ XDG_STATE_HOME=$HOME/.local/state
 # Setup lf #
 ############
 
+[[ -d $XDG_CONFIG_HOME/X11 ]] && rm -rf $XDG_CONFIG_HOME/X11
+mkdir --parents $XDG_CONFIG_HOME/X11
+ln -s "$DOTFILES/X11/xinitrc" $XDG_CONFIG_HOME/X11/xinitrc
+
+############
+# Setup lf #
+############
+
 [[ -L $XDG_CONFIG_HOME/lf ]] && rm -f $XDG_CONFIG_HOME/lf
 ln -s "$DOTFILES/lf" $XDG_CONFIG_HOME/lf
 
