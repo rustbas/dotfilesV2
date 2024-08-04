@@ -18,9 +18,9 @@ XDG_STATE_HOME=$HOME/.local/state
 [[ -L $XDG_CONFIG_HOME/tmux ]] && rm -f $XDG_CONFIG_HOME/tmux
 ln -s "$DOTFILES/tmux" $XDG_CONFIG_HOME/tmux
 
-#############
-# Setup zsh #
-#############
+############################
+# Setup zsh (must be last) #
+############################
 
 # Home env
 ( [[ -L ~/.zshenv ]] || [[ -f ~/.zshenv ]] ) && rm -f ~/.zshenv
