@@ -8,6 +8,9 @@ export XDG_STATE_HOME=$HOME/.local/state # Where user-specific state files shoul
 [[ -d $HOME/.local/bin ]] && mkdir --parents $HOME/.local/bin
 export PATH="$HOME/.local/bin:/home/rustam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 
+# Go's binaries
+[[ -d $HOME/go/bin ]] && export PATH="$HOME/go/bin:$PATH"
+
 # Xinitrc config
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc 
 export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverrc
