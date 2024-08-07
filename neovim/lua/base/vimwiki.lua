@@ -18,6 +18,7 @@ vim.cmd("let linux.nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'bash': 
 -- Morozko instructions
 vim.cmd("let morozko = {}")
 vim.cmd("let morozko.path = '~/workspace/wikis/morozko/'")
+vim.cmd("let morozko.html_path = '~/workspace/wikis/morozko/'")
 vim.cmd("let morozko.auto_export = 1")
 vim.cmd("let morozko.auto_toc = 1")
 
