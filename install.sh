@@ -23,6 +23,7 @@ ln -s "$DOTFILES/X11/xinitrc" $XDG_CONFIG_HOME/X11/xinitrc
 ############
 
 [[ -d $XDG_CONFIG_HOME/lf ]] && rm -rf $XDG_CONFIG_HOME/lf
+mkdir --parents $XDG_CONFIG_HOME/lf
 ln -s "$DOTFILES/lf/lfrc" $XDG_CONFIG_HOME/lf/lfrc
 
 ##############
@@ -30,6 +31,7 @@ ln -s "$DOTFILES/lf/lfrc" $XDG_CONFIG_HOME/lf/lfrc
 ##############
 
 [[ -d $XDG_CONFIG_HOME/tmux ]] && rm -f $XDG_CONFIG_HOME/tmux
+mkdir --parents $XDG_CONFIG_HOME/tmux
 ln -s "$DOTFILES/tmux/tmux.conf" $XDG_CONFIG_HOME/tmux/tmux.conf
 
 ################
@@ -37,6 +39,7 @@ ln -s "$DOTFILES/tmux/tmux.conf" $XDG_CONFIG_HOME/tmux/tmux.conf
 ################
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 [[ -L $XDG_CONFIG_HOME/nvim ]] && rm -f $XDG_CONFIG_HOME/nvim
+mkdir --parents $XDG_CONFIG_HOME/nvim
 ln -s "$DOTFILES/neovim" $XDG_CONFIG_HOME/nvim
 
 ############################
@@ -50,8 +53,9 @@ ln -s "$DOTFILES/zsh/.home.zshenv" ~/.zshenv
 # ZDOTDIR
 [[ -d $XDG_CONFIG_HOME/zsh ]] && rm -rf $XDG_CONFIG_HOME/zsh
 mkdir --parents $XDG_CONFIG_HOME/zsh
-ln -s "$DOTFILES/zsh/.zshenv" $XDG_CONFIG_HOME/zsh
-ln -s "$DOTFILES/zsh/.zshrc" $XDG_CONFIG_HOME/zsh
+ln -s "$DOTFILES/zsh/.zshenv" $XDG_CONFIG_HOME/zsh/.zshenv
+ln -s "$DOTFILES/zsh/.zshrc" $XDG_CONFIG_HOME/zsh/.zshrc
+ln -s "$DOTFILES/zsh/aliases" $XDG_CONFIG_HOME/zsh/aliases
 
 # oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
