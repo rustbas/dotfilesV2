@@ -52,8 +52,8 @@ ln -s "$DOTFILES/zsh/.home.zshenv" ~/.zshenv
 # ZDOTDIR
 [[ -d $XDG_CONFIG_HOME/zsh ]] && rm -rf $XDG_CONFIG_HOME/zsh
 mkdir --parents $XDG_CONFIG_HOME/zsh
-ln -s "$DOTFILES/zsh/.zshenv" $XDG_CONFIG_HOME/zsh/.zshenv
-ln -s "$DOTFILES/zsh/.zshrc" $XDG_CONFIG_HOME/zsh/.zshrc
+ln -s "$DOTFILES/zsh/zshenv" $XDG_CONFIG_HOME/zsh/.zshenv
+ln -s "$DOTFILES/zsh/zshrc" $XDG_CONFIG_HOME/zsh/.zshrc
 ln -s "$DOTFILES/zsh/aliases.sh" $XDG_CONFIG_HOME/zsh/aliases.sh
 
 # oh-my-zsh
