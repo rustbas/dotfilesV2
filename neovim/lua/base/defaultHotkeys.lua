@@ -2,7 +2,8 @@
 vim.keymap.set('n','<leader>h',':nohlsearch<CR>')
 
 -- make 
-vim.keymap.set('n','<leader>m',':make<CR>')
+vim.keymap.set('n','<leader>mm',':make<CR>')
+vim.keymap.set('n','<leader>mc',':make clean<CR>')
 
 -- Splits
 vim.keymap.set('n','<leader>sh',':split h<CR>')
