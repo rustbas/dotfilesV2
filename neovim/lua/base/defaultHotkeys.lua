@@ -12,3 +12,7 @@ vim.keymap.set('n','<leader>sv',':split v<CR>')
 vim.keymap.set('n','<leader>qo',':copen<CR>')
 vim.keymap.set('n','<leader>qp',':cprev<CR>')
 vim.keymap.set('n','<leader>qn',':cnext<CR>')
+
+-- Insert date
+vim.keymap.set('n','<leader>id',':read !date +\\%Y-\\%m-\\%d<CR>')
+vim.keymap.set('n','<leader>ih',':read !date +\\%H:\\%M:\\%S<CR>')
