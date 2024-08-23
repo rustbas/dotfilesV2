@@ -6,7 +6,7 @@ export XDG_STATE_HOME=$HOME/.local/state # Where user-specific state files shoul
 
 # User's binaries
 [[ -d $HOME/.local/bin ]] && mkdir --parents $HOME/.local/bin
-export PATH="$HOME/.local/bin:/home/rustam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Go's binaries
 [[ -d $HOME/go/bin ]] && export PATH="$HOME/go/bin:$PATH"
