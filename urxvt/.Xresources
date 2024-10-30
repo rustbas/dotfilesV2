@@ -12,6 +12,8 @@ URxvt.iso14755_52: false
 ! URxvt.keysym.C-Down:  resize-font:smaller
 ! URxvt.keysym.C-Up:    resize-font:bigger
 
+urxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed
+
 *.foreground: #C6C6C6
 *.background: #1C1C1C 
 *.cursorColor: #444444
@@ -72,14 +74,10 @@ URxvt*saveLines: 5000
 ! │ CopyPaste │
 ! ╰───────────╯
 
-
-! URxvt.clipboard.autocopy: true
-! URxvt.keysym.M-Escape: perl:keyboard-select:activate
-! URxvt.keysym.C-C: perl:clipboard:copy
-! URxvt.keysym.C-V: perl:clipboard:paste
-! URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-! URxvt.copyCommand: xsel -ib
-! URxvt.pasteCommand: xsel -ob
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
 
 ! ╭──────────────╮
 ! │ TRANSPARENCY │
