@@ -22,3 +22,10 @@ fi
 
 # aliases
 [[ -f $ZDOTDIR/aliases.sh ]] && source $ZDOTDIR/aliases.sh 
+
+# oh-my-zsh
+
+export ZSH="$ZDOTDIR/ohmyzsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
