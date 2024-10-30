@@ -26,6 +26,6 @@ fi
 # oh-my-zsh
 
 export ZSH="$ZDOTDIR/ohmyzsh"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
