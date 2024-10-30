@@ -75,8 +75,8 @@ URxvt*saveLines: 5000
 ! ╰───────────╯
 
 URxvt.keysym.C-minus:     resize-font:smaller
-URxvt.keysym.C-plus:      resize-font:bigger
-URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-plus:      resize-font:reset
+URxvt.keysym.C-equal:     resize-font:bigger
 URxvt.keysym.C-question:  resize-font:show
 
 ! ╭──────────────╮
