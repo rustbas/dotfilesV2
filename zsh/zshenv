@@ -21,4 +21,4 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 # urxvt 
-export URXVT_PERL_LIB="$XDG_CONFIG_HOME/urxvt/ext/resize-font"
+# export URXVT_PERL_LIB="$XDG_CONFIG_HOME/urxvt/ext"
