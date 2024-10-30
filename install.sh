@@ -43,9 +43,10 @@ ln -s "$DOTFILES/tmux/tmux.conf" $XDG_CONFIG_HOME/tmux/tmux.conf
 ######################
 
 [[ -d $XDG_CONFIG_HOME/urxvt ]] && rm -rf $XDG_CONFIG_HOME/urxvt
-mkdir --parents $XDG_CONFIG_HOME/urxvt/ext
+mkdir --parents $XDG_CONFIG_HOME/urxvt
+mkdir --parents $HOME/.urxvt/ext
 ln -s "$DOTFILES/urxvt/.Xresources" $XDG_CONFIG_HOME/urxvt/.Xresources
-ln -s "$DOTFILES/urxvt/ext/resize-font" $XDG_CONFIG_HOME/urxvt/ext/resize-font
+ln -s "$DOTFILES/urxvt/ext/resize-font" $HOME/.urxvt/ext/resize-font
 xrdb -merge $XDG_CONFIG_HOME/urxvt/.Xresources
 
 ############
