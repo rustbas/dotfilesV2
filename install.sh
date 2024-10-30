@@ -43,8 +43,9 @@ ln -s "$DOTFILES/tmux/tmux.conf" $XDG_CONFIG_HOME/tmux/tmux.conf
 ######################
 
 [[ -d $XDG_CONFIG_HOME/urxvt ]] && rm -rf $XDG_CONFIG_HOME/urxvt
-mkdir --parents $XDG_CONFIG_HOME/urxvt
+mkdir --parents $XDG_CONFIG_HOME/urxvt/ext
 ln -s "$DOTFILES/urxvt/.Xresources" $XDG_CONFIG_HOME/urxvt/.Xresources
+ln -s "$DOTFILES/urxvt/ext/resize-font" $XDG_CONFIG_HOME/urxvt/ext/resize-font
 xrdb -merge $XDG_CONFIG_HOME/urxvt/.Xresources
 
 ############
@@ -78,7 +79,7 @@ ln -s "$DOTFILES/zsh/zshrc" $XDG_CONFIG_HOME/zsh/.zshrc
 ln -s "$DOTFILES/zsh/aliases.sh" $XDG_CONFIG_HOME/zsh/aliases.sh
 
 # oh-my-zsh
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
 # sleep 10
 
 # some settings
