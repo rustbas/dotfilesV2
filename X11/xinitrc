@@ -1,5 +1,5 @@
 polybar &
-urxvtd &
+urxvtd -q -f -o &
 
 xrdb -merge ~/.config/urxvt/.Xresources
 
