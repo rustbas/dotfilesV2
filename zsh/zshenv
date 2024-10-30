@@ -19,3 +19,6 @@ export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverrc
 # Command-line settings
 export EDITOR=nvim
 export VISUAL=nvim
+
+# urxvt 
+export URXVT_PERL_LIB="$XDG_CONFIG_HOME/urxvt/ext/resize-font"
