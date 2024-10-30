@@ -4,3 +4,6 @@
 
 # neovim undo tree folder
 neovim/undo/
+
+# vim's swap-files
+*.swp
