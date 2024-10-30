@@ -1,0 +1,6 @@
+polybar &
+urxvtd &
+
+xrdb -merge ~/.config/urxvt/.Xresources
+
+exec i3 -c /home/rustam/.config/i3/config
