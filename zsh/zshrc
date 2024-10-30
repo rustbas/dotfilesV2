@@ -23,6 +23,13 @@ fi
 # aliases
 [[ -f $ZDOTDIR/aliases.sh ]] && source $ZDOTDIR/aliases.sh 
 
+# micromamba
+
+if test "which micromamba"
+then
+    eval "$(micromamba shell hook --shell zsh)"
+fi
+
 # oh-my-zsh
 
 export ZSH="$ZDOTDIR/ohmyzsh"

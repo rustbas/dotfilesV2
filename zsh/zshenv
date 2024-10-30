@@ -22,3 +22,6 @@ export VISUAL=nvim
 
 # urxvt 
 # export URXVT_PERL_LIB="$XDG_CONFIG_HOME/urxvt/ext"
+
+# micromamba
+export MAMBA_ROOT_PREFIX="~/.local/micromamba/"
