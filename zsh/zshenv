@@ -9,6 +9,9 @@ export XDG_STATE_HOME=$HOME/.local/state # Where user-specific state files shoul
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/sbin:$PATH"
 
+# Manpages
+export MANPATH="/usr/share/man:/opt/local/man:/usr/local/man:$MANPATH"
+
 # Go's binaries
 [[ -d $HOME/go/bin ]] && export PATH="$HOME/go/bin:$PATH"
 
