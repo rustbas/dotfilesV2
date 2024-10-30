@@ -7,7 +7,7 @@
 set -xe
 
 # I don't like it, but can't do better
-DOTFILES="/home/$USER/ws/dotfiles"
+DOTFILES="/home/$USER/ws/dotfilesV2"
 
 XDG_CONFIG_HOME=$HOME/.config 
 XDG_CACHE_HOME=$HOME/.cache 
