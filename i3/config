@@ -267,5 +267,8 @@ client.unfocused #333333 #222222 #888888 #292d2e #222222
 client.urgent $red1 $red1 $white2 $red1 $red1
 client.placeholder #000000 #0c0c0c $white2 #000000 #0c0c0c
 
+# back&forth
+workspace_auto_back_and_forth yes
+
 # wallpaper
 exec --no-startup-id feh --bg-scale /home/$USER/ws/dotfilesV2/wallpapers/wp3.jpg
