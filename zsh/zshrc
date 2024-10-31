@@ -34,5 +34,5 @@ fi
 
 export ZSH="$ZDOTDIR/ohmyzsh"
 ZSH_THEME="agnoster"
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
