@@ -64,6 +64,11 @@ This dotfiles provides next features:
 .P
 .PD
 .IP "8." 3
+\f[V]xsel\f[R] for copy to clipboard
+.PD 0
+.P
+.PD
+.IP "9." 3
 \f[V]tmux\f[R] as terminal multiplexer
 .SS REQUIREMENTS
 .IP "1." 3
@@ -121,21 +126,273 @@ JetBrainsMono Nerd Fonts (https://www.nerdfonts.com/font-downloads)
 .P
 .PD
 - \f[V]M\f[R] mean \f[V]Alt\f[R]
+.RE
+.SS tmux
+.IP \[bu] 2
+\f[V]C-Space\f[R] - prefix-key (\f[V]<PREFIX>\f[R])
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]M-j\f[R] - previous windows
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]M-k\f[R] - next windows
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<PREFIX> [\f[R] - go to vim mode (useful for copying from terminal)
+.SS neovim
+.IP \[bu] 2
+\f[V]Space\f[R] - leader key (\f[V]<LEADER>\f[R])
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> n\f[R] - NERDTreeToggle
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> h\f[R] - turn off highlight (after searching)
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> mm\f[R] - run \f[V]make\f[R]
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> mc\f[R] - run \f[V]make clean\f[R]
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> sh\f[R] - horizontal split
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> sv\f[R] - vertical split
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> qo\f[R] - open \f[V]quickfix\f[R] list
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> qp\f[R] - previous \f[V]quickfix\f[R] item
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> qn\f[R] - next \f[V]quickfix\f[R] item
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> id\f[R] - insert date in \f[V]YYYY-mm-DD\f[R] format
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]<LEADER> ih\f[R] - insert date in \f[V]HH:MM:SS\f[R] format
+.SH FILES
+.IP \[bu] 2
+\f[V]i3\f[R]
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]config\f[R] - i3-config
 .PD 0
 .P
 .PD
 .RE
-.SS tmux
 .IP \[bu] 2
-\f[V]C-Space\f[R] - prefix-key
+\f[V]lf\f[R]
+.PD 0
+.P
+.PD
+.RS 2
 .IP \[bu] 2
-\f[V]M-j\f[R] - previous windows
+\f[V]lfrc\f[R] - lf-config
+.PD 0
+.P
+.PD
+.RE
 .IP \[bu] 2
-\f[V]M-k\f[R] - next windows
+\f[V]neovim\f[R]
+.PD 0
+.P
+.PD
+.RS 2
 .IP \[bu] 2
-\f[V]C-Space [\f[R] - go to vim mode (useful for copying from terminal)
-.SH FILES
+\f[V]init.lua\f[R] - nvim-config, that loading the rest
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]lua\f[R] - config directory
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]base\f[R]
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]defaultHotkeys.lua\f[R] - default neovim hotkeys
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]defaultSettings.lua\f[R] - default neovim settings
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]plugins.lua\f[R] - loading plugins, setup them and set hotkeys
+.PD 0
+.P
+.PD
+.RE
+.IP \[bu] 2
+\f[V]lspconfig\f[R]
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]lspconfig.lua\f[R] - Language Server Protocol settings
+.PD 0
+.P
+.PD
+.RE
+.RE
+.RE
+.IP \[bu] 2
+\f[V]polybar\f[R]
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]config.ini\f[R] - polybar-config
+.PD 0
+.P
+.PD
+.RE
+.IP \[bu] 2
+\f[V]tmux\f[R]
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]tmux.conf\f[R] - tmux-config
+.PD 0
+.P
+.PD
+.RE
+.IP \[bu] 2
+\f[V]urxvt\f[R]
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]ext\f[R] - Perl extension folder
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V].Xresources\f[R] - urxvt-config (need to \f[V]xrdb\f[R] to work,
+see \f[V]install.sh\f[R])
+.PD 0
+.P
+.PD
+.RE
+.IP \[bu] 2
+\f[V]wallpapers\f[R]
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]wp3.png\f[R] - wallpaper
+.PD 0
+.P
+.PD
+.RE
+.IP \[bu] 2
+\f[V]X11\f[R]
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]xinitrc\f[R] - \f[V]startx\f[R] script
+.PD 0
+.P
+.PD
+.RE
+.IP \[bu] 2
+\f[V]zathura\f[R]
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]zathurarc\f[R] - pdf-viewer settings
+.PD 0
+.P
+.PD
+.RE
+.IP \[bu] 2
+\f[V]zsh\f[R]
+.PD 0
+.P
+.PD
+.RS 2
+.IP \[bu] 2
+\f[V]aliases.sh\f[R] - alias file
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]zshenv\f[R] - variables file
+.PD 0
+.P
+.PD
+.IP \[bu] 2
+\f[V]zshrc\f[R] - zsh-config
+.RE
 .SH ENVIRONMENT
+.IP \[bu] 2
+\f[V]ZDOTDIR\f[R] - zsh directory (\f[V]/home/rustam/.config/zsh\f[R])
+.IP \[bu] 2
+\f[V]XDG_CONFIG_HOME\f[R] - config directory
+.IP \[bu] 2
+\f[V]XDG_CACHE_HOME\f[R] - cache directory
+.IP \[bu] 2
+\f[V]XDG_DATA_HOME\f[R] - user\[cq]s data directory
+.IP \[bu] 2
+\f[V]XINITRC\f[R] - \f[V]xinitrc\f[R] config path
+.IP \[bu] 2
+\f[V]EDITOR\f[R] - editor (e.g.\ for git)
+.IP \[bu] 2
+\f[V]VISUAL\f[R] - editor for command-line (\f[V]C-x C-e\f[R])
 .SH AUTHORS
 .IP \[bu] 2
 rustbas (https://github.com/rustbas)
