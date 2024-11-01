@@ -24,3 +24,4 @@ restore-file() {
 
     rsync --info=progress2 "$backup_dir/$backup_file" "$restored_dir/$restored_file"
 }
+alias rf=restore-file
