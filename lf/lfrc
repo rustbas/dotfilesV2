@@ -27,3 +27,68 @@ cmd mkfile ${{
 cmd edit ${{
     $EDITOR $f
 }}
+
+# ripgrep + fzf search
+cmd fzf_search ${{
+    cmd="rg --column --line-number --no-heading --color=always --smart-case"
+    fzf --ansi --disabled --layout=reverse --header="Search in files" --delimiter=: \
+        --bind="start:reload([ -n {q} ] && $cmd -- {q} || true)" \
+        --bind="change:reload([ -n {q} ] && $cmd -- {q} || true)" \
+        --bind='enter:become(lf -remote "send $id select \"$(printf "%s" {1} | sed '\''s/\\/\\\\/g;s/"/\\"/g'\'')\"")' \
+        --preview='cat -- {1}' # Use your favorite previewer here (bat, source-highlight, etc.), for example:
+        #--preview-window='+{2}-/2' \
+        #--preview='bat --color=always --highlight-line={2} -- {1}'
+        # Alternatively you can even use the same previewer you've configured for lf
+        #--preview='~/.config/lf/cleaner; ~/.config/lf/previewer {1} "$FZF_PREVIEW_COLUMNS" "$FZF_PREVIEW_LINES" "$FZF_PREVIEW_LEFT" "$FZF_PREVIEW_TOP"')"
+}}
+
+map gs :fzf_search
+
+# Follow link
+cmd follow-link %{{
+  lf -remote "send $id select \"$(readlink -- "$f" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
+}}
+
+map gL follow-link
+
+# bulk-rename
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a -- $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" > "$old"
+    printf '%s\n' "$fs" > "$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
+
+map R bulk-rename
+
+# copy paths (require xclip)
+cmd yank-file $printf '%s' "$f" | xclip -i -selection clipboard
+cmd yank-paths $printf '%s' "$fx" | xclip -i -selection clipboard
+cmd yank-dirname &printf '%s' "$PWD" | xclip -i -selection clipboard
+cmd yank-basename &basename -a -- $fx | head -c-1 | xclip -i -selection clipboard
+cmd yank-basename-without-extension &basename -a -- $fx | sed -E 's/\.[^.]+$//' | head -c-1 | xclip -i -selection clipboard
+
+# quit-on-cd
+cmd quit-and-cd &{{
+    pwd > "$LF_CD_FILE"
+    lf -remote "send $id quit"
+}}
+
+map Q quit-and-cd
