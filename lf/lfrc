@@ -94,5 +94,5 @@ cmd quit-and-cd &{{
 map Q quit-and-cd
 
 # move to trash (require trash-cli)
-cmd trash %trash-put -- $fx
+cmd trash %trash-put -- "$fx"
 map T trash
