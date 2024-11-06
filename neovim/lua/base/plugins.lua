@@ -61,6 +61,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.api.nvim_create_autocmd("FileType", {
     pattern = {"TelescopeResults"},
     callback = function()
-        vim.opt.nofoldenable = true
+        -- vim.opt.nofoldenable = true
     end
 })
