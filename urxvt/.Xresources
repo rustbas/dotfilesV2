@@ -12,7 +12,7 @@ urxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed
  * Matcher (highlight)
  */
 
-URxvt.url-launcher:       sensible-browser
+URxvt.url-launcher:       librewolf
 URxvt.keysym.C-Delete:    matcher:last
 URxvt.keysym.M-Delete:    matcher:list
 URxvt.matcher.button:     1
