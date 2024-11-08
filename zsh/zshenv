@@ -12,6 +12,9 @@ export PATH="/usr/sbin:$PATH"
 # Manpages
 # export MANPATH="/usr/share/man:/opt/local/man:/usr/local/man:$MANPATH"
 
+# Tokens
+[[ -f "~/.env" ]] && source "~/.env"
+
 # Go's binaries
 [[ -d $HOME/go/bin ]] && export PATH="$HOME/go/bin:$PATH"
 
