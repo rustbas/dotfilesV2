@@ -42,4 +42,4 @@ lf() {
 }
 
 # cd to dir in fzf
-alias cdto="cd $(find -type d | fzf)"
+alias cdto='cd $(find -type d | fzf)'
