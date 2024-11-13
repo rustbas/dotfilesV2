@@ -21,6 +21,7 @@ XDG_STATE_HOME=$HOME/.local/state
 [[ -d $XDG_CONFIG_HOME/X11 ]] && rm -rf $XDG_CONFIG_HOME/X11
 mkdir --parents $XDG_CONFIG_HOME/X11
 ln -s "$DOTFILES/X11/xinitrc" $XDG_CONFIG_HOME/X11/xinitrc
+ln -s "$DOTFILES/X11/xinitrc" $HOME/.xinitrc
 
 ############
 # Setup lf #
@@ -44,10 +45,11 @@ ln -s "$DOTFILES/tmux/tmux.conf" $XDG_CONFIG_HOME/tmux/tmux.conf
 
 [[ -d $XDG_CONFIG_HOME/urxvt ]] && rm -rf $XDG_CONFIG_HOME/urxvt
 mkdir --parents $XDG_CONFIG_HOME/urxvt
-mkdir --parents $HOME/.urxvt/ext
 ln -s "$DOTFILES/urxvt/.Xresources" $XDG_CONFIG_HOME/urxvt/.Xresources
+[[ -d $HOME/.urxvt ]] && rm -rf $HOME/.urxvt
+mkdir --parents $HOME/.urxvt/ext
+ln -s "$DOTFILES/urxvt/.Xresources" $HOME/.urxvt/.Xresources
 ln -s "$DOTFILES/urxvt/ext/resize-font" $HOME/.urxvt/ext/resize-font
-xrdb -merge $XDG_CONFIG_HOME/urxvt/.Xresources
 
 ############
 # Setup i3 #
