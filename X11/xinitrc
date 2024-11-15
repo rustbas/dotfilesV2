@@ -1,4 +1,4 @@
-polybar &
+polybar --config=~/ws/dotfilesV2/polybar/config.ini &
 urxvtd -q -f -o &
 
 xrdb -merge ~/.config/urxvt/.Xresources
