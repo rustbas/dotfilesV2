@@ -6,7 +6,7 @@ require('base.plugins')
 require('base.plugins_d.NERDTree')
 require('base.plugins_d.telescope')
 require('base.plugins_d.vim-fugitive')
-require('base.plugins_d.vimwiki')
+-- require('base.plugins_d.vimwiki')
 require('base.plugins_d.nvim-comment')
 
 -- LSP
