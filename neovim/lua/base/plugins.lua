@@ -16,7 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'--, { 'tag': '0.1.6' }
 Plug 'brenoprata10/nvim-highlight-colors'
-Plug 'vimwiki/vimwiki'
+-- Plug 'vimwiki/vimwiki'
 Plug 'terrortylor/nvim-comment'
 vim.call('plug#end')
 
