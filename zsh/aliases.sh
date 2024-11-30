@@ -46,3 +46,9 @@ alias cdto='cd $(find -type d | fzf)'
 
 # micromamba 
 alias mm=micromamba
+
+# for lf
+
+# if command -v lfrun > /dev/null 2>&1; then
+    # alias lf=lfrun
+# fi
