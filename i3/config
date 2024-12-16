@@ -106,7 +106,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -223,9 +223,9 @@ bindsym $mod+Shift+m [instance="cmus_scratchpad"] scratchpad show
 exec --no-startup-id urxvtc -cd /home/$USER/Music -name cmus_scratchpad -e "cmus"
 
 # Scratchpad lf
-for_window [instance="lf_scratchpad"] move to scratchpad, border none
-bindsym $mod+Shift+f [instance="lf_scratchpad"] scratchpad show
-exec --no-startup-id urxvtc  -name lf_scratchpad -e "lf"
+# for_window [instance="lf_scratchpad"] move to scratchpad, border none
+# bindsym $mod+Shift+f [instance="lf_scratchpad"] scratchpad show
+# exec --no-startup-id urxvtc  -name lf_scratchpad -e "lf"
 
 # border
 for_window [class="^.*"] border pixel 3
