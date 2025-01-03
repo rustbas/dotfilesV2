@@ -1,0 +1,6 @@
+polybar --config=~/ws/dotfilesV2/polybar/config.ini &
+urxvtd -q -f -o &
+
+xrdb -merge ~/.config/urxvt/.Xresources
+
+exec i3 -c /home/rustam/.config/i3/config

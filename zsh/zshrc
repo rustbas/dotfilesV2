@@ -1,0 +1,38 @@
+#!/bin/zsh
+
+# Completion
+autoload -U compinit
+compinit
+ 
+# Correction
+# setopt correctall
+  
+# Prompt
+autoload -U promptinit
+promptinit
+prompt default
+
+# Keyboard
+if [ $TERM != "linux" ]
+then
+    { setxkbmap -option 'caps:ctrl_modifier';xcape -e 'Caps_Lock=Escape'; }
+    { setxkbmap -layout us,ru && setxkbmap -option 'grp:switch,grp:win_space_toggle'; }
+    { setxkbmap -option "compose:ralt"; }
+fi
+
+# aliases
+[[ -f $ZDOTDIR/aliases.sh ]] && source $ZDOTDIR/aliases.sh 
+
+# micromamba
+
+if test "which micromamba"
+then
+    eval "$(micromamba shell hook --shell zsh)"
+fi
+
+# oh-my-zsh
+
+export ZSH="$ZDOTDIR/ohmyzsh"
+ZSH_THEME="agnoster"
+plugins=(git zsh-autosuggestions)
+source $ZSH/oh-my-zsh.sh

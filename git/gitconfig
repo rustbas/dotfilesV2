@@ -1,0 +1,20 @@
+# default branch
+[init]
+	defaultBranch = main
+
+# difftool section
+[difftool]
+    prompt = true
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$REMOTE\" \"$LOCAL\""
+
+# mergetool section
+[merge]
+  tool = nvimdiff
+[mergetool]
+  prompt = true
+  keepBackup = false
+[mergetool "nvimdiff"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"

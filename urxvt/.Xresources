@@ -6,11 +6,23 @@ URxvt.iso14755_52: false
    ╰──────────────────╯
 */
 
-! Install "urxvt-resize-font-git" from the AUR
+urxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed
 
-! URxvt.perl-ext-common:  resize-font
-! URxvt.keysym.C-Down:  resize-font:smaller
-! URxvt.keysym.C-Up:    resize-font:bigger
+/*
+ * Matcher (highlight)
+ */
+
+URxvt.url-launcher:       librewolf
+URxvt.keysym.C-Delete:    matcher:last
+URxvt.keysym.M-Delete:    matcher:list
+URxvt.matcher.button:     1
+URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt.matcher.pattern.2:  \\B(/\\S+?):(\\d+)(?=:|$)
+URxvt.matcher.launcher.2: gvim +$2 $1
+
+/*
+ * Colors
+ */
 
 *.foreground: #C6C6C6
 *.background: #1C1C1C 
@@ -46,7 +58,7 @@ URxvt*utf8Title: true
 URxvt*locale: 1
 !URxvt*font: xft:DejaVu Sans Mono:size=12:antialias=true:style=Book
 ! URxvt*font: xft:JetBrainsMono Nerd Font:size=11
-URxvt*font: xft:JetBrainsMono:size=12
+URxvt*font: xft:JetBrainsMono:size=14
 !URxvt*font: xft:Inconsolata Nerd Font Mono:style=Medium:size=10:pixelsize=16:antialias=true
 URxvt*borderLess: false
 URxvt*externalBorder: 0
@@ -54,20 +66,14 @@ URxvt*internalBorder: 4
 URxvt*scrollBar: false
 URxvt*saveLines: 5000
 
-!URxvt*perl-ext-common: default ,tabbedex
-!URxvt*keysym.Control -Shift-N: perl:tabbedex:new_tab
-!URxvt*keysym.Control -Shift-K: perl:tabbedex:next_tab
-!URxvt*keysym.Control -Shift-J: perl:tabbedex:prev_tab
-!URxvt.keysym.Control -Shift-R: perl:tabbedex:rename_tab
-!URxvt.keysym.Control -Shift-H: perl:tabbedex:move_tab_left
-!URxvt.keysym.Control -Shift-L: perl:tabbedex:move_tab_right
-!URxvt*tabbedex.tabbar -fg: 15
-!URxvt*tabbedex.tabbar -bg: 236
-!URxvt*tabbedex.tab-fg: 110
-!URxvt*tabbedex.tab-bg: 236
-!URxvt*tabbedex.transparent:true
-!URxvt*tabbedex.new-button: false
+! ╭───────────╮
+! │ CopyPaste │
+! ╰───────────╯
 
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:reset
+URxvt.keysym.C-equal:     resize-font:bigger
+URxvt.keysym.C-question:  resize-font:show
 
 ! ╭──────────────╮
 ! │ TRANSPARENCY │

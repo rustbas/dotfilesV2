@@ -28,7 +28,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i /home/rustam/dotfilesV2/wp3.png
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i /home/rustam/ws/dotfilesV2/wallpapers/wp3.png
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -53,7 +53,6 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec urxvt
 
 # kill focused window
@@ -62,7 +61,8 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindcode $mod+40 exec "rofi -modi run -show drun"
+bindcode $mod+40 exec --no-startup-id "rofi -modi run -show drun"
+bindsym $mod+Shift+s exec --no-startup-id "dmoji" 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -106,7 +106,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -159,7 +159,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -199,9 +199,9 @@ gaps inner 10
 # }
 
 # Screenshots
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date).png"
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).png"
-bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).png"
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date +%Y-%m-%d_%H:%M:%S).png"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date +%Y-%m-%d_%H:%M:%S).png"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date +%Y-%m-%d_%H:%M:%S).png"
 
 ## Clipboard Screenshots
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
@@ -210,22 +210,22 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 
 # i3Lock 
 # bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000016
-bindsym $mod+Ctrl+l exec --no-startup-id i3lock -i /home/rustam/dotfilesV2/wp3.png
+bindsym $mod+Ctrl+l exec --no-startup-id i3lock -i /home/rustam/ws/dotfilesV2/wallpapers/wp3.png
 
 # Scratchpad htop
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
-exec urxvtc -name htop_scratchpad -e htop
+exec --no-startup-id urxvtc -name htop_scratchpad -e htop
 
 # Scratchpad cmus
 for_window [instance="cmus_scratchpad"] move to scratchpad, border none, resize set 800 600
 bindsym $mod+Shift+m [instance="cmus_scratchpad"] scratchpad show
-exec urxvtc -cd /home/$USER/Music -name cmus_scratchpad -e "cmus"
+exec --no-startup-id urxvtc -cd /home/$USER/Music -name cmus_scratchpad -e "cmus"
 
 # Scratchpad lf
-for_window [instance="lf_scratchpad"] move to scratchpad, border none
-bindsym $mod+Shift+f [instance="lf_scratchpad"] scratchpad show
-exec urxvtc  -name lf_scratchpad -e "lf"
+# for_window [instance="lf_scratchpad"] move to scratchpad, border none
+# bindsym $mod+Shift+f [instance="lf_scratchpad"] scratchpad show
+# exec --no-startup-id urxvtc  -name lf_scratchpad -e "lf"
 
 # border
 for_window [class="^.*"] border pixel 3
@@ -268,5 +268,11 @@ client.unfocused #333333 #222222 #888888 #292d2e #222222
 client.urgent $red1 $red1 $white2 $red1 $red1
 client.placeholder #000000 #0c0c0c $white2 #000000 #0c0c0c
 
+# back&forth
+workspace_auto_back_and_forth yes
+
 # wallpaper
-exec --no-startup-id feh --bg-scale /home/$USER/dotfilesV2/wp3.jpg
+exec --no-startup-id feh --bg-scale /home/$USER/ws/dotfilesV2/wallpapers/wp3.jpg
+
+# Test script
+# bindsym --release $mod+t exec --no-startup-id bash ~/.local/bin/put-msg.sh

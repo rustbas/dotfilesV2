@@ -97,7 +97,7 @@ local function statusline()
     )
 end
 
-vim.opt.statusline = statusline()
+-- vim.opt.statusline = statusline()
 
 -- Undo tree
 -- save undo-trees in files
