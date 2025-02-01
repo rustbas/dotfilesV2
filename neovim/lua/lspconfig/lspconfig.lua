@@ -1,13 +1,13 @@
-require("mason").setup()
-require("mason-lspconfig").setup({
-    ensure_installed = {"clangd"},
-})
-
-require("lspconfig").clangd.setup {
-    -- cmd = {
-        -- "--query-driver=/usr/bin/g++",
-    -- }
-}
+-- require("mason").setup()
+-- require("mason-lspconfig").setup({
+--     ensure_installed = {"clangd"},
+-- })
+--
+-- require("lspconfig").clangd.setup {
+--     -- cmd = {
+--         -- "--query-driver=/usr/bin/g++",
+--     -- }
+-- }
 
 -- Set static signcolumn with errors
 vim.opt.signcolumn = "yes"
