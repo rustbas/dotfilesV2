@@ -211,7 +211,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 
 # i3Lock 
 # bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000016
-bindsym $mod+Ctrl+l exec --no-startup-id i3lock -i /home/rustam/ws/dotfilesV2/wallpapers/wp3.png
+bindsym $mod+Ctrl+l exec --no-startup-id i3lock -i /home/rustam/ws/dotfilesV2/wallpapers/wp4.jpg
 
 # Scratchpad htop
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
