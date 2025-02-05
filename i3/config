@@ -28,7 +28,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i /home/rustam/ws/dotfilesV2/wallpapers/wp4.jpg
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i /home/rustam/ws/dotfilesV2/wallpapers/wp3.png
 # best regards to https://x.com/Rythayze/status/1526642703836094464
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -211,7 +211,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 
 # i3Lock 
 # bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000016
-bindsym $mod+Ctrl+l exec --no-startup-id i3lock -i /home/rustam/ws/dotfilesV2/wallpapers/wp4.jpg
+bindsym $mod+Ctrl+l exec --no-startup-id i3lock -i /home/rustam/ws/dotfilesV2/wallpapers/wp3.png
 
 # Scratchpad htop
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
