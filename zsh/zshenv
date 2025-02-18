@@ -33,6 +33,6 @@ export VISUAL=nvim
 export MAMBA_ROOT_PREFIX="~/.local/micromamba/"
 
 # Fix italic in tmux
-if [ -z "${TMUX}" ]; then
-    export TERM=tmux-256color
+if [ -n "${TMUX}" ]; then
+    export TERM=xterm-256color
 fi
