@@ -45,6 +45,7 @@ ln -s "$DOTFILES/tmux/tmux.conf" $XDG_CONFIG_HOME/tmux/tmux.conf
 ######################
 
 [[ -d $XDG_CONFIG_HOME/urxvt ]] && rm -rf $XDG_CONFIG_HOME/urxvt
+[[ -d $HOME/.urxvt ]] && rm -rf $HOME/.urxvt
 mkdir --parents $XDG_CONFIG_HOME/urxvt
 ln -s "$DOTFILES/urxvt/.Xresources" $XDG_CONFIG_HOME/urxvt/.Xresources
 [[ -d $HOME/.urxvt ]] && rm -rf $HOME/.urxvt

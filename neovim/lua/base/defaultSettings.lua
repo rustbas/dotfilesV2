@@ -19,24 +19,42 @@ vim.cmd('syntax on')
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
+-- see all whitespace chars
+-- vim.opt.listchars="eol:$,tab:>-,trail:~,extends:>,precedes:<,space:."
+vim.opt.listchars = {eol = '.',tab = '>-',trail = '~',extends = '>',precedes = '<',space = '.'}
+vim.opt.list=true
+
 -- tabs and indents
 vim.opt.expandtab=true
 vim.opt.tabstop=4
 vim.opt.softtabstop=4
 vim.opt.shiftwidth=4
 
+vim.opt.smarttab = true
+vim.opt.autoindent = true
+
 -- C-indents
 vim.api.nvim_create_autocmd("FileType", {
     pattern = {"c", "cpp"},
     callback = function()
+        vim.opt.expandtab=true
         vim.opt.tabstop=2
         vim.opt.softtabstop=2
         vim.opt.shiftwidth=2
     end
 })
 
-vim.opt.smarttab = true
-vim.opt.autoindent = true
+-- Golang-indents
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = {"go"},
+    callback = function()
+        vim.opt.expandtab=false
+        -- vim.opt.tabstop=2
+        -- vim.opt.softtabstop=2
+        -- vim.opt.shiftwidth=2
+    end
+})
+
 
 -- fast scroll (???)
 vim.opt.ttyfast = true

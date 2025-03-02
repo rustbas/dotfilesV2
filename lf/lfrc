@@ -96,3 +96,8 @@ map Q quit-and-cd
 # move to trash (require trash-cli)
 cmd trash %trash-put -- "$fx"
 map T trash
+
+# Preview (https://github.com/thimc/lfimg)
+
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/cleaner
