@@ -16,3 +16,8 @@
   :init
   (setq howm-directory "~/ws/docs/NotesOrgMode/howm/")
   )
+
+;; htmlize
+
+(use-package htmlize
+  :ensure t)
