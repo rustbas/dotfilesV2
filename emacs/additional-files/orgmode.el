@@ -8,7 +8,9 @@
 
 ;; Allow `org-refile` (C-c C-w) move subtree to another file
 ;; Maybe useful in GTD
-(setq org-refile-use-outline-path 'file)
+(setq org-refile-targets '((nil :maxlevel . 9)
+                                (org-agenda-files :maxlevel . 9)))
+(setq org-refile-use-outline-path t)
 
 ;; Load org-mode file from repo
 (custom-set-variables
