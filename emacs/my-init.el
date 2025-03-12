@@ -12,6 +12,9 @@
 (scroll-bar-mode 0)
 (column-number-mode 1)
 
+;; Backups (files~)
+(setq backup-directory-alist `(("." . "~/.cache/EmacsBackups")))
+
 ;; IDO mode
 (load-file "/home/rustam/.config/emacs/additional-files/ido.el")
 				       
