@@ -23,3 +23,9 @@
 				       
 ;; Org-mode stuff		       
 (load-file "/home/rustam/.config/emacs/additional-files/orgmode.el")
+
+;; colorize output in compile buffer
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (ansi-color-apply-on-region compilation-filter-start (point-max)))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
