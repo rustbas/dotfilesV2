@@ -12,6 +12,10 @@
 (scroll-bar-mode 0)
 (column-number-mode 1)
 
+;; Set font
+(set-frame-font "Jetbrains Mono 15" nil t)
+;; (set-face-attribute 'default nil :height 150) ;; fontsize scale
+
 ;; Backups (files~)
 (setq backup-directory-alist `(("." . "~/.cache/EmacsBackups")))
 

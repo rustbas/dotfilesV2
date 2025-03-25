@@ -21,6 +21,8 @@ XDG_STATE_HOME=$HOME/.local/state
 [[ -d $XDG_CONFIG_HOME/X11 ]] && rm -rf $XDG_CONFIG_HOME/X11
 mkdir --parents $XDG_CONFIG_HOME/X11
 ln -s "$DOTFILES/X11/xinitrc" $XDG_CONFIG_HOME/X11/xinitrc
+[[ -f $HOME/.xinitrc ]] && rm $HOME/.xinitrc
+ln -s "$DOTFILES/X11/xinitrc" $HOME/.xinitrc
 
 ############
 # Setup lf #
@@ -45,10 +47,11 @@ ln -s "$DOTFILES/tmux/tmux.conf" $XDG_CONFIG_HOME/tmux/tmux.conf
 [[ -d $XDG_CONFIG_HOME/urxvt ]] && rm -rf $XDG_CONFIG_HOME/urxvt
 [[ -d $HOME/.urxvt ]] && rm -rf $HOME/.urxvt
 mkdir --parents $XDG_CONFIG_HOME/urxvt
-mkdir --parents $HOME/.urxvt/ext
 ln -s "$DOTFILES/urxvt/.Xresources" $XDG_CONFIG_HOME/urxvt/.Xresources
+[[ -d $HOME/.urxvt ]] && rm -rf $HOME/.urxvt
+mkdir --parents $HOME/.urxvt/ext
+ln -s "$DOTFILES/urxvt/.Xresources" $HOME/.urxvt/.Xresources
 ln -s "$DOTFILES/urxvt/ext/resize-font" $HOME/.urxvt/ext/resize-font
-xrdb -merge $XDG_CONFIG_HOME/urxvt/.Xresources
 
 ############
 # Setup i3 #
@@ -66,39 +69,14 @@ ln -s "$DOTFILES/i3/config" $XDG_CONFIG_HOME/i3/config
 ln -s "$DOTFILES/neovim" $XDG_CONFIG_HOME/nvim
 
 ############################
-# Setup zsh (must be last) #
+# Setup bash (must be last) #
 ############################
 
-# Home env
-( [[ -L ~/.zshenv ]] || [[ -f ~/.zshenv ]] ) && rm -f ~/.zshenv
-ln -s "$DOTFILES/zsh/.home.zshenv" ~/.zshenv
 
-# ZDOTDIR
-[[ -d $XDG_CONFIG_HOME/zsh ]] && rm -rf $XDG_CONFIG_HOME/zsh
-mkdir --parents $XDG_CONFIG_HOME/zsh
-ln -s "$DOTFILES/zsh/zshenv" $XDG_CONFIG_HOME/zsh/.zshenv
-ln -s "$DOTFILES/zsh/zshrc" $XDG_CONFIG_HOME/zsh/.zshrc
-ln -s "$DOTFILES/zsh/aliases.sh" $XDG_CONFIG_HOME/zsh/aliases.sh
+[[ -f $HOME/.bashrc ]] && rm -f $HOME/.bashrc
+[[ -f $HOME/.bashenv ]] && rm -f $HOME/.bashenv
+[[ -f $HOME/.aliases.sh ]] && rm -f $HOME/.aliases.sh
 
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
-# sleep 10
-
-# some settings
-# cat > $XDG_CONFIG_HOME/zsh/.zshrc << EOF
-# #!/bin/zsh
-# 
-# # Completion
-# autoload -U compinit
-# compinit
- # 
-# # Correction
-# # setopt correctall
-  # 
-# # Prompt
-# autoload -U promptinit
-# promptinit
-# prompt default
-# EOF
-
-
+ln -s "$DOTFILES/bash/bashrc" $HOME/.bashrc
+ln -s "$DOTFILES/bash/bashenv" $HOME/.bashenv
+ln -s "$DOTFILES/bash/aliases.sh" $HOME/.aliases.sh

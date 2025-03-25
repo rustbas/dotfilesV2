@@ -54,15 +54,15 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec ~/.local/bin/st
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindcode $mod+40 exec --no-startup-id "rofi -modi run -show drun"
+# bindcode $mod+40 exec --no-startup-id "rofi -modi run -show drun"
 bindsym $mod+Shift+s exec --no-startup-id "dmoji" 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
@@ -194,10 +194,10 @@ gaps inner 10
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-        # status_command i3status
+bar {
+        status_command i3status
         # status_command polybar
-# }
+}
 
 # Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date +%Y-%m-%d_%H:%M:%S).png"

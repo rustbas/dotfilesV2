@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Keyboard
+if [ $TERM != "linux" ]
+then
+    { setxkbmap -option 'caps:ctrl_modifier';xcape -e 'Caps_Lock=Escape'; }
+    { setxkbmap -layout us,ru && setxkbmap -option 'grp:switch,grp:win_space_toggle'; }
+    { setxkbmap -option "compose:ralt"; }
+fi
+
+# colors
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# aliases
+[[ -f ~/.aliases.sh ]] && source ~/.aliases.sh 
+
+# bashenv
+[[ -f ~/.bashenv ]] && source ~/.bashenv 
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'micromamba shell init' !!
+export MAMBA_EXE='/home/rustam/.local/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/rustam/.local/micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from micromamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
