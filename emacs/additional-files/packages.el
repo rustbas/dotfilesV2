@@ -21,6 +21,7 @@
   (setq howm-file-name-format "%Y/%m/%Y-%m-%d-%H%M%S.org")
   ;; (require 'howm-org) ;; Write notes in Org-mode.
   (setq howm-follow-theme t) ;; Use your Emacs theme colors.
+  (setq howm-view-title-header "*")
   :hook
   (org-mode . howm-mode)
   )
