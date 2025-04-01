@@ -33,3 +33,6 @@
 (defun colorize-compilation-buffer ()
   (ansi-color-apply-on-region compilation-filter-start (point-max)))
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+
+;; bind `recompile` to C-c m
+(global-set-key (kbd "C-c m") 'recompile)
