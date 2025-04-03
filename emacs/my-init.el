@@ -36,3 +36,6 @@
 
 ;; bind `recompile` to C-c m
 (global-set-key (kbd "C-c m") 'recompile)
+
+;; auto-revert buffers
+(global-auto-revert-mode 1)
