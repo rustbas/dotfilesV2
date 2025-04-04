@@ -39,3 +39,8 @@
 
 ;; auto-revert buffers
 (global-auto-revert-mode 1)
+
+;; close all buffers
+(defun close-all-buffers ()
+(interactive)
+  (mapc 'kill-buffer (buffer-list)))
