@@ -1,6 +1,9 @@
 ;; Turn off bell
 (setq ring-bell-function 'ignore)
 
+;; no startup msg  
+(setq inhibit-startup-message t)
+
 ;; Relative number & highlight current line
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode 1)
