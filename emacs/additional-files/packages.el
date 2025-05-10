@@ -30,3 +30,8 @@
 
 (use-package htmlize
   :ensure t)
+
+;; gruber darker theme
+(use-package gruber-darker-theme
+  :ensure t)
+(load-theme 'gruber-darker t)
