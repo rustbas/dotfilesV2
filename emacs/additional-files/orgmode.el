@@ -16,3 +16,6 @@
 (custom-set-variables
 '(org-agenda-files (file-expand-wildcards "~/ws/docs/NotesOrgMode/GTD/*.org"))
 )
+
+;; Writing "CLOSED"-time
+(setq org-log-done 'time)
