@@ -1,6 +1,12 @@
 ;; Turn off bell
 (setq ring-bell-function 'ignore)
 
+;; no tab indent
+(setq-default indent-tabs-mode nil)
+
+;; show non print chars
+(global-whitespace-mode 1)
+
 ;; no startup msg  
 (setq inhibit-startup-message t)
 
