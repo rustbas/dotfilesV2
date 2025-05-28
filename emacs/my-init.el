@@ -5,7 +5,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;; show non print chars
-(global-whitespace-mode 1)
+(global-whitespace-mode 0)
 
 ;; no startup msg  
 (setq inhibit-startup-message t)
