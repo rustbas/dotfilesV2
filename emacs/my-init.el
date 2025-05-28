@@ -43,8 +43,9 @@
   (ansi-color-apply-on-region compilation-filter-start (point-max)))
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
-;; bind `recompile` to C-c m
-(global-set-key (kbd "C-c m") 'recompile)
+;; bind `compile` and `recompile` functions
+(global-set-key (kbd "C-c m") 'compile)
+(global-set-key (kbd "C-c r") 'recompile)
 
 ;; auto-revert buffers
 (global-auto-revert-mode 1)
