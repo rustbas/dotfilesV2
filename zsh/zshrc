@@ -37,3 +37,11 @@ export ZSH="$ZDOTDIR/ohmyzsh"
 ZSH_THEME="agnoster"
 plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
+
+# pnpm
+export PNPM_HOME="/home/rustam/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
