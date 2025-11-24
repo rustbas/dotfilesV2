@@ -52,3 +52,7 @@ alias mm=micromamba
 # if command -v lfrun > /dev/null 2>&1; then
     # alias lf=lfrun
 # fi
+
+# yt-dlp aria2c
+alias yt-dlp2c=yt-dlp --external-downloader=aria2c
+
