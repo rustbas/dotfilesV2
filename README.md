@@ -9,6 +9,14 @@ dotfiles on Debian and i3
 - `i3` + `polybar`
 - TO BE DONE
 
+## Installation
+
+```conlose
+foo@bar:~$ git clone https://github.com/rustbas/dotfilesV2.git
+foo@bar:~$ cd dotfilesV2
+foo@bar:~/dotfilesV2$ stow -v --target=$HOME/.config neovim # and stuff
+```
+
 ## Install manual
 
 ```shell
