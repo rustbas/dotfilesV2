@@ -8,3 +8,4 @@ neovim/undo/
 # vim's swap-files
 *.swp
 dotfiles.1.gz
+neovim/.config/nvim/undo
