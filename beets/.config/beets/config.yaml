@@ -1,0 +1,37 @@
+directory: /home/rustam/Music/beet_result/
+library: ~/.config/beets/musiclibrary.db
+
+plugins: chroma fetchart fromfilename musicbrainz
+
+import:
+  move: yes
+  write: yes
+  copy: no
+  timid: no
+  quiet: yes
+  resume: no
+  autotag: yes
+
+match:
+  strong_rec_thresh: 0.9
+  medium_rec_thresh: 0.8
+  rec_gap_thresh: 0.35
+
+paths:
+  singleton: $artist/$title
+  default: $artist/$title
+
+chroma:
+  auto: yes
+  search_limit: 5
+  data_source_mismatch_penalty: 0.5
+
+fetchart:
+  auto: yes
+  cautious: no
+  sources:
+    - filesystem
+    - coverart
+    - itunes
+    - amazon
+    - albumart
