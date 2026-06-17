@@ -1,0 +1,18 @@
+set mbox_type = Maildir
+set folder = "~/mail/ructam.basyroff@yandex.ru/"
+
+set sidebar_visible
+set sidebar_format="%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+set spoolfile = "+INBOX"
+mailboxes +INBOX
+
+# set date_format = "%Y-%m-%d %H:%M"
+set index_format = "%4C %Z %[%Y-%m-%d %H:%M] %-15.15L %s"
+
+set use_threads = no       # Disable conversation grouping
+set sort = reverse-date    # Newest emails at the top (use 'date' for oldest first)
+
+# You can use any gmail imap mailboxes
+# mailboxes =INBOX # =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Spam =[Gmail]/Trash
