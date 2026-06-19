@@ -9,3 +9,5 @@ neovim/undo/
 *.swp
 dotfiles.1.gz
 neovim/.config/nvim/undo
+neomutt/.config/neomutt/accounts.yml
+neomutt/.config/neomutt/accounts.neomuttrc

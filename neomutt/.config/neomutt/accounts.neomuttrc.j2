@@ -1,0 +1,13 @@
+{% for account in accounts %}
+# {{ account.name }}
+folder-hook {{ account.email }}  \
+    set folder="~/mail/{{ account.email }}" \
+    set from="{{ account.email }}" \
+    set envelope_from=yes \
+    set sendmail="/usr/sbin/sendmail -a {{ account.email }}" \
+    set use_from=yes \
+    set realname="{{ account.real_name }}" \
+    set postponed="+Drafts" \
+    set record="+Sent" \
+    set spoolfile="+INBOX"
+{% endfor %}

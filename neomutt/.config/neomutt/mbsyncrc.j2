@@ -1,0 +1,25 @@
+{% for account in accounts %}
+# {{ account.name }}
+IMAPAccount {{ account.email }}
+Host {{ account.imap_server }}
+User {{ account.email }}
+Pass {{ account.pass }}
+TLSType IMAPS
+
+IMAPStore {{ account.email }}-remote
+Account {{ account.email }}
+
+MaildirStore {{ account.email }}-local
+Path ~/mail/{{ account.email }}/
+Inbox ~/mail/{{ account.email }}/INBOX
+SubFolders Verbatim
+
+Channel {{ account.email }}
+Far :{{ account.email }}-remote:
+Near :{{ account.email }}-local:
+Patterns *
+Create Both
+SyncState *
+Sync All
+
+{% endfor %}

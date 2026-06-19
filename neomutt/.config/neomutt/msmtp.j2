@@ -1,0 +1,15 @@
+defaults
+auth on
+tls on
+tls_starttls off
+tls_certcheck on
+logfile ~/.local/state/msmtp/msmtp.log
+
+{% for account in accounts %}
+account {{ account.email }}
+host {{ account.smtp_server }}
+port {{ account.smtp_port | default("587") }}
+from {{ account.email }}
+user {{ account.email }}
+password {{ account.pass }}
+{% endfor %}

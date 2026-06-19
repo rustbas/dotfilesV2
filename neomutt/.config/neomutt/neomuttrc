@@ -1,12 +1,17 @@
 set mbox_type = Maildir
-set folder = "~/mail/ructam.basyroff@yandex.ru/"
+
+
+set folder = "~/mail/saccada@saccada.xyz"
+
+macro index <F1> "<change-folder>~/mail/saccada@saccada.xyz/INBOX<enter>"
+macro index <F2> "<change-folder>~/mail/neomutt-test@saccada.xyz/INBOX<enter>"
 
 set sidebar_visible
 set sidebar_format="%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
 
 set spoolfile = "+INBOX"
-mailboxes +INBOX
+mailboxes +INBOX +Sent
 
 # set date_format = "%Y-%m-%d %H:%M"
 set index_format = "%4C %Z %[%Y-%m-%d %H:%M] %-15.15L %s"
@@ -14,5 +19,20 @@ set index_format = "%4C %Z %[%Y-%m-%d %H:%M] %-15.15L %s"
 set use_threads = no       # Disable conversation grouping
 set sort = reverse-date    # Newest emails at the top (use 'date' for oldest first)
 
-# You can use any gmail imap mailboxes
-# mailboxes =INBOX # =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Spam =[Gmail]/Trash
+# Terminal browser W3M
+set implicit_autoview = yes
+auto_view text/html
+alternative_order text/plain text/html
+set mailcap_path = ~/.mailcap
+
+set sidebar_visible = yes
+set sidebar_width = 20
+
+# Перемещение по боковой панели
+bind index,pager <M-p> sidebar-prev
+bind index,pager <M-n> sidebar-next
+
+# Переход к выбранной папке из сайдбара
+bind index,pager <M-o> sidebar-open
+
+source "~/.config/neomutt/accounts.neomuttrc"
