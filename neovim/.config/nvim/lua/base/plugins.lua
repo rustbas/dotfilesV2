@@ -3,7 +3,7 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 Plug 'scrooloose/nerdtree'
-Plug 'preservim/nerdcommenter'
+-- Plug 'preservim/nerdcommenter'
 Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -19,7 +19,7 @@ Plug 'brenoprata10/nvim-highlight-colors'
 -- Plug 'vimwiki/vimwiki'
 Plug 'terrortylor/nvim-comment'
 vim.call('plug#end')
-
+-- 
 ---------------------
 -- PLUGIN SETTINGS --
 ---------------------
