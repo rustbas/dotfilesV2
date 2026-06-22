@@ -60,7 +60,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.opt.ttyfast = true
 
 -- cursor always on center
-vim.wo.so=30
+vim.wo.so=10
 
 -- mouse 
 vim.opt.mouse=a
