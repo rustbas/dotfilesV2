@@ -5,7 +5,7 @@ vim.call('plug#begin')
 Plug 'scrooloose/nerdtree'
 -- Plug 'preservim/nerdcommenter'
 Plug 'tomasr/molokai'
-Plug 'joshdick/onedark.vim'
+-- Plug 'joshdick/onedark.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -17,7 +17,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'--, { 'tag': '0.1.6' }
 Plug 'brenoprata10/nvim-highlight-colors'
 -- Plug 'vimwiki/vimwiki'
-Plug 'terrortylor/nvim-comment'
+-- Plug 'terrortylor/nvim-comment'
 vim.call('plug#end')
 -- 
 ---------------------
