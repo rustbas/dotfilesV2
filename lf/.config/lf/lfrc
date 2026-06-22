@@ -30,7 +30,7 @@ cmd edit ${{
 
 # ripgrep + fzf search
 cmd fzf_search ${{
-    cmd="rg --column --line-number --no-heading --color=always --smart-case"
+    cmd="rg --ignore-case --column --line-number --no-heading --color=always"
     fzf --ansi --disabled --layout=reverse --header="Search in files" --delimiter=: \
         --bind="start:reload([ -n {q} ] && $cmd -- {q} || true)" \
         --bind="change:reload([ -n {q} ] && $cmd -- {q} || true)" \
