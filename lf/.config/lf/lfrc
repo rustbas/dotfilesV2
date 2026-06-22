@@ -99,5 +99,5 @@ map T trash
 
 # Preview (https://github.com/thimc/lfimg)
 
-set previewer ~/.config/lf/preview
-set cleaner ~/.config/lf/cleaner
+# set previewer ~/.config/lf/preview
+# set cleaner ~/.config/lf/cleaner
